@@ -1,7 +1,13 @@
 mat-toolbar{
     justify-content: space-between;
+    background-color: rgb(224, 154, 166);
 }
 
 .content{
     padding: 32px;
+}
+
+.logo{
+    text-decoration: none;
+    color: #ffff;
 }

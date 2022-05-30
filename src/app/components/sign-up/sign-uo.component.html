@@ -1,1 +1,37 @@
-<p>sign-uo works!</p>
+<div class="form-container mat-elevation-z5">
+    <h1>Cadastro</h1>
+    <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+        <mat-form-field>
+            <input matInput  placeholder="Nome" formControlName="name">
+            <mat-error *ngIf="name?.errors?.['required']">
+                Nome e obrigatorio!
+            </mat-error>
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput  placeholder="Email address" formControlName="email">
+            <mat-error *ngIf="email?.errors?.['required']">
+                Email is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Password" formControlName="password" type="password">
+            <mat-error *ngIf="password?.errors?.['required']">
+                Senha e obrigatorio
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Confirma a senha" formControlName="confirmPassword" type="password">
+            <mat-error *ngIf="confirmPassword?.errors?.['required']">
+                Senha e obrigatorio
+            </mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="signUpForm?.errors?.['passwordsDontMatch']">
+            Erro na sua senha
+        </mat-error>
+        <div class="center margin-top">
+            <button mat-raised-button type="submit">
+                Login
+            </button>            
+        </div>
+    </form>
+</div>

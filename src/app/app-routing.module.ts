@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -9,11 +10,14 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: LandingComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'sign-up', component: SignUoComponent },
+  { path: 'login/sign-up', component: SignUoComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  declarations:[],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
