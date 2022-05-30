@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingComponent } from './components/landing/landing.component';
 import { SignUoComponent } from './components/sign-up/sign-uo.component';
@@ -24,7 +24,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     AppComponent,
     LandingComponent,
     SignUoComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +40,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     provideAuth(() => getAuth()),
     HotToastModule.forRoot(),
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

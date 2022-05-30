@@ -1,4 +1,36 @@
-<div class="form-container mat-elevation-z5">
+<div class="main-login">
+    <div class="left-login">
+        <img src="../../../assets/svg/depilation-animate.svg" class="left-login-image" alt="">
+    </div>
+    <div class="right-login">
+        <div class="card-login">
+            <h1>Entrar</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                <div class="textfield">
+                    <label for="usuario">E-mail</label>
+                    <input type="text" name="email" placeholder="E-mail" formControlName="email">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" formControlName="password">
+                </div>
+                <button class="btn-login">Entrar</button>
+            </form>
+            <span class="center margin-top">Novo aqui?<a routerLink="sign-up">Cadastre-se</a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="form-container mat-elevation-z5">
     <h1>Login</h1>
     <form [formGroup]="loginForm" (ngSubmit)="submit()">
         <mat-form-field>
@@ -20,4 +52,4 @@
         </div>
         <span class="center margin-top">Novo aqui?<a routerLink="sign-up">Cadastre-se</a></span>
     </form>
-</div>
+</div> -->
